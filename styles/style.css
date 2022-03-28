@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(61, 61, 61);
+}
+
+h1{
+    font-weight: 300;
+    font-size: 64px;
+    color:  rgb(255, 255, 168);
+    margin-top: 30px;
+}
+
+.jogo{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    cursor: pointer;
+    background: radial-gradient(circle, 
+    rgb(0,0,0,0)
+    rgb(0, 0, 0, 0) 49%, 
+    rgb(0, 0, 0) 50%, 
+    rgba(0,0,0,0.6) 100%);
+}
+
+#quadro1 {
+    background-color: yellow;
+    color:yellow;
+}
+
+#quadro2 {
+    background-color: blue;
+    color: blue;
+}
+
+#quadro3 {
+    background-color: limegreen;
+    color: limegreen;
+}
+
+#quadro4 {
+    background-color: red;
+    color: red;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 32px;
+    color: rgb(255, 255, 168);
+}
+
+#iniciar {
+    font-size: 32px;
+    margin-top: -50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: chartreuse;
+    cursor: pointer;
+}
+
+#iniciar:hover {
+    background: radial-gradient(circle, 
+    rgb(253, 255, 142) 0%, 
+    rgb(217, 255, 0) 50%, 
+    rgba(0,0,0,0.6) 100%);
+}
