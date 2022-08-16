@@ -4,6 +4,7 @@ const quadro2 = document.getElementById("quadro2");
 const quadro3 = document.getElementById("quadro3");
 const quadro4 = document.getElementById("quadro4");
 const round = document.getElementById('rodada');
+const high = document.getElementById('recorde')
 
 var jogo = [];
 var input = [];
@@ -130,10 +131,12 @@ function finishRodada(){
 }
 
 async function endGame(){
+    if(recorde < rodada) recorde = rodada;
     jogo = [];
     rodada = 0;
     primeiro = true;
     round.innerHTML = "Rodada: " + rodada;
+    high.innerHTML = 'Recorde: ' + recorde;
     quadro1.style.backgroundColor = 'red';
     quadro2.style.backgroundColor = 'red';
     quadro3.style.backgroundColor = 'red';
