@@ -8,21 +8,26 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-    <div><h1>Genius</h1></div>
-    <div>
-        <div class="jogo off" id="quadro1" onclick="quadroOn(1)">.</div>
-        <div class="jogo off" id="quadro2" onclick="quadroOn(2)">.</div>
-    </div>
-    <div>
-        <div class="jogo off" id="quadro3" onclick="quadroOn(3)">.</div>
-        <div class="jogo off" id="quadro4" onclick="quadroOn(4)">.</div>
-    </div>
-    <div>
+
+    <section><div>
         <h2 id="rodada">Rodada: </h2>
         <h2 id="recorde">Recorde:</h2><br/>
         <button id="iniciar" onclick="start()">Iniciar!</button>
-    </div>
-
+    </div></section>
+    <section>
+        <div>
+            <h1>Genius</h1>
+        </div>
+        <div>
+            <div class="jogo off" id="quadro1" onclick="quadroOn(1)">.</div>
+            <div class="jogo off" id="quadro2" onclick="quadroOn(2)">.</div>
+        </div>
+        <div>
+            <div class="jogo off" id="quadro3" onclick="quadroOn(3)">.</div>
+            <div class="jogo off" id="quadro4" onclick="quadroOn(4)">.</div>
+        </div>
+    </section>
+    <section></section>
     <script src="scripts/script.js"></script>
 </body>
 </html>

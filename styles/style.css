@@ -1,7 +1,13 @@
 body{
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(61, 61, 61);
+}
+
+section{
+    margin: auto;
 }
 
 h1{
