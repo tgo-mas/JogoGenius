@@ -53,13 +53,12 @@ async function displayJogo(){
     }
 }
 
-function changeColor(num){
-    fetch('https://www.colr.org/json/colors/random/' + jogo.length)
+async function changeColor(num){
+    await fetch('https://www.colr.org/json/colors/random/' + jogo.length)
         .then(res => {
             return res.json();
         }).then(data => {
             let message = data.colors[num].hex;
-        console.log(data.colors)
             let color = '#' + message;
             body.style.backgroundColor = color;
         })
