@@ -10,4 +10,4 @@ O objetivo do jogo é ir o mais longe que conseguir lembrando a sequência das c
 
 [x] - Dificuldade - Aumentar velocidade
 
-[ ] - Dificuldade - Mudar cor de fundo a partir do nível 10
+[x] - Dificuldade - Mudar cor de fundo a partir do nível 10

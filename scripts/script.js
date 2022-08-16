@@ -5,6 +5,7 @@ const quadro3 = document.getElementById("quadro3");
 const quadro4 = document.getElementById("quadro4");
 const round = document.getElementById('rodada');
 const high = document.getElementById('recorde')
+const body = document.body;
 
 var jogo = [];
 var input = [];
@@ -21,13 +22,15 @@ async function start(){
     input = [];
     rodada += 1;
     round.innerHTML = "Rodada: " + rodada;
-    rodada > recorde ? recorde = rodada : recorde = recorde;
+    if(rodada == 1){
+        tempoAceso = 0.8;
+        tempoApagado = 0.3;
+    }
     jogo.push(getNumero());
     if(jogo.length % 5 == 0){
-        tempoAceso -= 0.1;
+        tempoAceso -= 0.07;
         tempoApagado -= 0.03;
     }
-    console.log(jogo);
     await displayJogo();
 }
 
@@ -42,10 +45,24 @@ async function displayJogo(){
         primeiro = true;
     }
     for(let i = 0; i < jogo.length; i++){
-        console.log(jogo[i]);
+        if(jogo.length >= 10){
+            await changeColor(i);
+        }
         await acendeQuadro(jogo[i]);
         await delay(tempoApagado);
     }
+}
+
+function changeColor(num){
+    fetch('https://www.colr.org/json/colors/random/' + jogo.length)
+        .then(res => {
+            return res.json();
+        }).then(data => {
+            let message = data.colors[num].hex;
+        console.log(data.colors)
+            let color = '#' + message;
+            body.style.backgroundColor = color;
+        })
 }
 
 function delay(n){
