@@ -134,6 +134,7 @@ async function endGame(){
     if(recorde < rodada) recorde = rodada;
     jogo = [];
     rodada = 0;
+    vel = 1;
     primeiro = true;
     round.innerHTML = "Rodada: " + rodada;
     high.innerHTML = 'Recorde: ' + recorde;
